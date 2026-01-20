@@ -1,0 +1,205 @@
+.container_text {
+  padding: 28px 16px 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-content: start;
+
+  --text: rgba(255, 255, 255, 0.86);
+  --muted: rgba(255, 255, 255, 0.74);
+  --border: rgba(255, 255, 255, 0.10);
+  --panel: rgba(255, 255, 255, 0.06);
+  --chip: rgba(255, 255, 255, 0.08);
+
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+
+  color: var(--text);
+  font: var(--font-medium-small-500);
+}
+
+.container_text :global(h1),
+.container_text :global(h2),
+.container_text :global(h3),
+.container_text :global(h4) {
+  margin: 0;
+  color: var(--white);
+  letter-spacing: -0.02em;
+}
+
+.container_text :global(h2) {
+  font: var(--font-medium-500);
+  font-size: clamp(24px, 2vw + 14px, 36px);
+  line-height: 1.12;
+}
+
+.container_text :global(p) {
+  margin: 0;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.lead {
+  font: var(--font-tiny-400);
+  color: var(--muted);
+}
+
+.typoText {
+  font: var(--font-tiny-400);
+  color: var(--text);
+}
+
+.container_text :global(strong) {
+  font: var(--font-small-700);
+  color: var(--white);
+}
+
+.container_text :global(em) {
+  font: var(--font-tiny-400);
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.container_text :global(mark) {
+  color: var(--white);
+  background: transparent;
+  border: none;
+  padding: 0 0.35em;
+  border-radius: 0.55em;
+}
+
+.container_text :global(a) {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.35);
+  text-underline-offset: 3px;
+}
+
+.container_text :global(a:hover) {
+  text-decoration-color: rgba(255, 255, 255, 0.7);
+}
+
+.container_text :global(a:focus-visible) {
+  outline: 2px solid rgba(255, 255, 255, 0.85);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.container_text :global(abbr) {
+  cursor: help;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: rgba(255, 255, 255, 0.55);
+}
+
+.container_text :global(sup) {
+  vertical-align: super;
+}
+.container_text :global(sub) {
+  vertical-align: sub;
+}
+
+.container_text :global(sup),
+.container_text :global(sub) {
+  font: var(--font-medium-very-small-500);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.callout {
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+}
+
+.info {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.hr {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 4px 0 0;
+}
+
+.toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+
+  padding-top: 12px;
+  font: var(--font-small-600);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.toc a {
+  font: var(--font-small-600);
+  color: rgba(255, 255, 255, 0.92);
+
+  padding: 6px 10px;
+  border-radius: 999px;
+
+  background: var(--chip);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  text-decoration: none;
+}
+
+.toc a:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.toc a:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.85);
+  outline-offset: 2px;
+}
+
+.sep {
+  opacity: 0.55;
+  margin: 0 4px;
+}
+
+.pulse {
+  position: relative;
+  display: inline-block;
+  animation: pulseMark 1.6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes pulseMark {
+  0%, 100% {
+    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.16);
+    transform: translateY(-1px) scale(1.03);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse {
+    animation: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .container_text {
+    padding: 18px 14px 28px;
+    border-radius: 16px;
+  }
+
+  .toc {
+    gap: 8px 10px;
+  }
+
+  .toc a {
+    padding: 6px 9px;
+  }
+}
