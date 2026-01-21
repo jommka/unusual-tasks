@@ -1,0 +1,35 @@
+.row {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 14px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.label {
+  justify-self: end;
+  font: var(--font-tiny-400);
+  color: var(--bg-dark-gray);
+}
+
+.top {
+  align-self: start;
+  padding-top: 6px;
+}
+
+.control {
+  min-width: 0;
+}
+
+.error {
+  font: var(--font-small-600);
+  color: var(--red);
+}
+
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .label { justify-self: start; }
+}

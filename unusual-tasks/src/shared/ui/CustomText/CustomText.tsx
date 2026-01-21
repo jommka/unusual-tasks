@@ -24,7 +24,7 @@ const CustomText = () => {
             />
 
             <p className={styles.lead}>
-                Здесь: <strong>выделения</strong>, <em>акценты</em>,{" "}
+                Здесь: <strong>выделение</strong>, <em>акценты</em>,{" "}
                 <mark className={styles.pulse}>подсветка</mark>.
             </p>
 
