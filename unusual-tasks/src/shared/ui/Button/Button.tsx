@@ -6,7 +6,7 @@ import {
     type ButtonStyle,
     type ButtonVariant,
     THEMES
-} from "../../../app/config/buttonTheme.ts";
+} from "../../../app/config/buttonConfig.ts";
 
 type Props = Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "color"> & {
     variant?: ButtonVariant;

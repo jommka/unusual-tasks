@@ -1,4 +1,4 @@
-import type {ButtonState, ButtonStyle, ButtonVariant} from "./buttonTheme.ts";
+import type {ButtonState, ButtonStyle, ButtonVariant} from "./buttonConfig.ts";
 
 export const STATES: ButtonState[] = ["default", "hover", "active", "disabled"];
 

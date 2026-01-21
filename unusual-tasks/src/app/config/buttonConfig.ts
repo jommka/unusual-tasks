@@ -3,7 +3,7 @@ export type ButtonStyle = "outline" | "solid";
 export type ButtonSize = "md" | "sm";
 export type ButtonState = "default" | "hover" | "active" | "disabled";
 
-export type ButtonTheme = {
+export type ButtonConfig = {
     border: string;
     text: string;
     bg: string;
@@ -11,7 +11,7 @@ export type ButtonTheme = {
     activeBg: string;
 };
 
-export const THEMES: Record<ButtonVariant, ButtonTheme> = {
+export const THEMES: Record<ButtonVariant, ButtonConfig> = {
     neutral: {
         border: "#afafaf",
         text: "#111111",
