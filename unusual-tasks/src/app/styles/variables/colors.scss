@@ -1,12 +1,21 @@
 :root {
   --white: #fff;
+  --black: #111111;
   --bg-gray: #F5F5F7;
   --bg-light-gray: #e5e5ea;
+  --btn-outline-bg-neutral-hover: #eeeeee;
+  --btn-outline-bg-neutral-active: #e2e2e2;
+  --btn-outline-bg-color: #ebebeb;
+  --btn-outline-bg-color-hover: #f3f3f3;
+  --btn-outline-bg-danger-active: #cdcdcd;
+  --btn-outline-bg-success-active: #e1e1e1;
   --bg-dark-gray: #242424;
   --light-beige: #fbf3bf;
   --blue: #2a66ff;
   --red: #b00020;
+  --btn-outline-border-danger: #db241f;
   --violet: #6246ff;
   --violet-light: #5a43df;
   --violet-lighter: #7a66ff;
+  --btn-outline-border-success: #4e7f1d;
 }
