@@ -1,0 +1,147 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border-radius: 6px;
+  border: 1px solid var(--btn-border);
+  user-select: none;
+  cursor: pointer;
+
+  box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+
+  transition: background-color 120ms ease, transform 60ms ease, box-shadow 120ms ease,
+  opacity 120ms ease, border-color 120ms ease;
+}
+
+.md {
+  height: 34px;
+  padding: 0 14px;
+  font: var(--font-small-600);
+}
+
+.sm {
+  height: 30px;
+  padding: 0 12px;
+  font: var(--font-small-600);
+}
+
+.outline {
+  background: var(--bg-gray);
+  color: var(--black);
+}
+
+.solid {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border-color: var(--btn-border);
+}
+
+.neutral.outline {
+  color: var(--black);
+}
+
+.danger.outline {
+  color: var(--black);
+  border-color: var(--btn-outline-border-danger);
+  background: var(--btn-outline-bg-color);
+}
+
+.success.outline {
+  color: var(--black);
+  border-color: var(--btn-outline-border-success);
+  background: var(--btn-outline-bg-color);
+}
+
+
+.label {
+  line-height: 1;
+}
+
+.leftIcon,
+.rightIcon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.leftIcon {
+  width: 18px;
+  justify-content: center;
+  filter: grayscale(1);
+}
+
+.btn:not(:disabled):hover {
+  background: var(--btn-hover-bg);
+}
+
+.neutral.outline:not(:disabled):hover {
+  background: var(--btn-outline-bg-neutral-hover);
+}
+
+.danger.outline:not(:disabled):hover,
+.success.outline:not(:disabled):hover {
+  background: var(--btn-outline-bg-color-hover);
+}
+
+.btn:not(:disabled):active {
+  background: var(--btn-active-bg);
+  transform: translateY(1px);
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.neutral.outline:not(:disabled):active {
+  background: var(--btn-outline-bg-neutral-active);
+}
+
+.danger.outline:not(:disabled):active {
+  background: var(--btn-outline-bg-danger-active);
+}
+
+.success.outline:not(:disabled):active {
+  background: var(--btn-outline-bg-success-active);
+}
+
+
+.btn:focus-visible {
+  outline: 2px solid rgba(98, 70, 255, 0.45);
+  outline-offset: 2px;
+}
+
+.btn:disabled,
+.state_disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.state_default { }
+.state_hover {
+  background: var(--btn-hover-bg);
+}
+
+.neutral.outline.state_hover {
+  background: var(--btn-outline-bg-neutral-hover);
+}
+
+.danger.outline.state_hover,
+.success.outline.state_hover {
+  background: var(--btn-outline-bg-color-hover);
+}
+
+.state_active {
+  background: var(--btn-active-bg);
+  transform: translateY(1px);
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.neutral.outline.state_active {
+  background: var(--btn-outline-bg-neutral-active);
+}
+
+.danger.outline.state_active {
+  background: var(--btn-outline-bg-danger-active);
+}
+
+.success.outline.state_active {
+  background: var(--btn-outline-bg-success-active);
+}
