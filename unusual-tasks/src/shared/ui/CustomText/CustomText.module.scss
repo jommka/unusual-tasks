@@ -1,9 +1,10 @@
 .container_text {
-  padding: 28px 16px 44px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
   align-content: start;
+  padding: 28px 16px 44px;
+  gap: 12px;
+  max-width: 900px;
 
   --text: rgba(255, 255, 255, 0.86);
   --muted: rgba(255, 255, 255, 0.74);
